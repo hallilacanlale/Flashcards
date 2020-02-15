@@ -5,7 +5,7 @@
 `TODO://` A flashcard application created in Xcode. 
 
 ### App Walk-though
-<img src="https://recordit.co/cydyFWINnM" width=200><br>
+<img src="https://github.com/hallilacanlale/Flashcards/raw/master/cydyFWINnM.png.mp4M" width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
