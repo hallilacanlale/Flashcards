@@ -6,7 +6,7 @@
 Flashcard application that displays questions and answers. 
 
 ### App Walk-though
-<img src="https://recordit.co/cydyFWINnM" width=200><br>
+<img src="http://g.recordit.co/cydyFWINnM.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
