@@ -7,7 +7,7 @@ Flashcard application that displays questions and answers.
 
 ### App Walk-though
 
-<img src="https://s3.amazonaws.com/img0.recordit.co/07bCrl6Tue.mp4?AWSAccessKeyId=AKIAUQ5RURZ7ND2T2B6I&Expires=1583449864&Signature=XEzurF80tZipA%2Fp5A946PSjGd44%3D" width=200><br>
+<img src="https://recordit.co/07bCrl6Tue.gif" width=200><br>
 
 
 ## Required
