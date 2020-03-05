@@ -1,14 +1,14 @@
+## Flashcards!
+
 ## Lab 2
 
 ### App Description
 Flashcard application that displays questions and answers. 
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://s3.amazonaws.com/img0.recordit.co/07bCrl6Tue.mp4?AWSAccessKeyId=AKIAUQ5RURZ7ND2T2B6I&Expires=1583449447&Signature=D6sSv8wuyY4N4n0ArQYxjGk3LP8%3D" width=200><br>
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [x] User can open the creation screen
@@ -19,3 +19,24 @@ Flashcard application that displays questions and answers.
 - [x] User gets an error if they try to create a new flashcard with no question or answer
 - [x] User can edit existing flashcard
 - [ ] User can add multiple choice answers in the creation screen
+
+
+## Lab 1
+
+### App Description
+Flashcard application that displays questions and answers. 
+
+### App Walk-though
+<img src="https://recordit.co/cydyFWINnM" width=200><br>
+
+
+## Required
+- [x] Create New Project in Xcode
+- [x] Add a view for the front side of the flashcard to display the question
+- [x] Add a view for the back side of the flashcard to display the answer
+- [x] Build in logic to show the answer side when the card is tapped
+- [x] Push code to GitHub
+## Optional
+- [x] Toggle the flashcard between the question side and the answer side
+- [x] Style the question and answer side of the card to better distinguish between the two sides
+- [x] Add selectable multiple choice answers beneath the card
