@@ -31,10 +31,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.19228056069999999" green="0.23573175069999999" blue="0.47845524550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="0.97219783069999999" green="0.92158508299999997" blue="0.92156821489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-sC-lRb">
+                                        <rect key="frame" x="252" y="101" width="89" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title=" ✏️"/>
+                                        <connections>
+                                            <segue destination="t5k-af-tkx" kind="presentation" id="QTv-xQ-RSr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -75,6 +84,17 @@
                                     <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIj-I7-SmG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAE-3F-rJn">
+                                <rect key="frame" x="149" y="773" width="117" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.19228056069999999" green="0.23573175069999999" blue="0.47845524550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t5k-af-tkx" kind="presentation" id="ZZz-Uy-Vpd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,5 +117,71 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="Ts1-Vm-MD9">
+            <objects>
+                <viewController id="ARl-Vq-RXV" customClass="CreationViewController" customModule="Flashcards_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lzK-cF-tqI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uy-cC-gSq">
+                                <rect key="frame" x="51" y="249" width="325" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-nn-Gum">
+                                <rect key="frame" x="51" y="188" width="325" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cRP-XN-qQH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QG7-CA-jdt">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Rou-N6-tty">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="ARl-Vq-RXV" id="rbm-ef-FJC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="bMl-kz-9cG">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="ARl-Vq-RXV" id="ZbA-SO-bBZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="3uy-cC-gSq" id="7WY-2L-xN1"/>
+                        <outlet property="questionTextField" destination="JMm-nn-Gum" id="OLU-26-0f1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4A-3N-Ftg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707.2463768115942" y="125.89285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Obr-Xi-tF7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t5k-af-tkx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Ka-Az-gwi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ARl-Vq-RXV" kind="relationship" relationship="rootViewController" id="dCT-S0-83T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2p-0W-nwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="118"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZZz-Uy-Vpd"/>
+    </inferredMetricsTieBreakers>
 </document>
