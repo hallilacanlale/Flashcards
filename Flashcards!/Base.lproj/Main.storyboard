@@ -95,6 +95,24 @@
                                     <segue destination="t5k-af-tkx" kind="presentation" id="ZZz-Uy-Vpd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHF-FC-EyA">
+                                <rect key="frame" x="44" y="792" width="71" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bg8-Z1-yJ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-KK-ZZZ">
+                                <rect key="frame" x="300" y="783" width="71" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lea-Gc-I67"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -106,6 +124,8 @@
                         <outlet property="btnOptionTwo" destination="bby-Qy-2vT" id="zXB-Ug-0Yf"/>
                         <outlet property="card" destination="Zou-um-XLG" id="Uej-xC-jfd"/>
                         <outlet property="frontLabel" destination="v6A-In-Q5s" id="NVp-3m-EJV"/>
+                        <outlet property="nextButton" destination="voB-KK-ZZZ" id="SdR-BF-k0v"/>
+                        <outlet property="prevButton" destination="CHF-FC-EyA" id="1Rt-RQ-01M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
