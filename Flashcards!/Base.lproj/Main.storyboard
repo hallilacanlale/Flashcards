@@ -49,7 +49,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title=" ✏️"/>
                                         <connections>
-                                            <segue destination="t5k-af-tkx" kind="presentation" id="QTv-xQ-RSr"/>
+                                            <segue destination="t5k-af-tkx" kind="presentation" identifier="editSegue" id="QTv-xQ-RSr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -100,7 +100,7 @@
                                     <color key="titleColor" red="0.19228056069999999" green="0.23573175069999999" blue="0.47845524550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="t5k-af-tkx" kind="presentation" id="ZZz-Uy-Vpd"/>
+                                    <segue destination="t5k-af-tkx" kind="presentation" identifier="createSegue" id="ZZz-Uy-Vpd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-KK-ZZZ">

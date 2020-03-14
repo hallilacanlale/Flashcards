@@ -93,11 +93,9 @@ class ViewController: UIViewController {
     @IBAction func didTapOnDelete(_ sender: Any) {
         if flashcards.count <= 1 {
             // show alert "cannot delete last card!"
-            let alert = UIAlertController(title: "Delete Flashcard", message: "You cannot delete the last remaining flashcard!", preferredStyle: .actionSheet)
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            alert.addAction(cancelAction)
+            let alert = UIAlertController(title: "Delete Flashcard", message: "You cannot delete the last remaining flashcard!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
             
             present(alert, animated: true)
         } else {
@@ -232,10 +230,17 @@ class ViewController: UIViewController {
         let creationController = navigationController.topViewController as! CreationViewController
         
         creationController.flashcardsController = self
-        creationController.initialQuestion = frontLabel.text
-        creationController.initialAnswer = backLabel.text
-        creationController.initialExtraOptionOne = btnOptionOne.currentTitle
-        creationController.initialExtraOptionTwo = btnOptionThree.currentTitle
+        
+        if segue.identifier == "editSegue" {
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+            creationController.initialExtraOptionOne = btnOptionOne.currentTitle
+            creationController.initialExtraOptionTwo = btnOptionThree.currentTitle
+        } else if segue.identifier == "createSegue" {
+            // user clicked on the Plus button
+            
+        }
+
     }
     
 }
