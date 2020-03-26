@@ -158,10 +158,12 @@ class ViewController: UIViewController {
         updateLabels()
         animateCardIn()
         updateNextPrevButtons()
-//
-//        btnOptionOne.isEnabled = true
-//        btnOptionTwo.isEnabled = true
-//        btnOptionThree.isEnabled = true
+
+        btnOptionOne.isEnabled = true
+        btnOptionTwo.isEnabled = true
+        btnOptionThree.isEnabled = true
+        frontLabel.isHidden = false
+        
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -169,11 +171,11 @@ class ViewController: UIViewController {
         updateLabels()
         animateCardOut()
         updateNextPrevButtons()
-//        
-//        btnOptionOne.isEnabled = true
-//        btnOptionTwo.isEnabled = true
-//        btnOptionThree.isEnabled = true
-        
+
+        btnOptionOne.isEnabled = true
+        btnOptionTwo.isEnabled = true
+        btnOptionThree.isEnabled = true
+        frontLabel.isHidden = false
     }
     
     func animateCardOut(){
@@ -222,10 +224,19 @@ class ViewController: UIViewController {
         
         frontLabel.text = currentFlashcard.question
         backLabel.text = currentFlashcard.answer
+
+        let buttons = [btnOptionOne, btnOptionTwo, btnOptionThree].shuffled()
+        let answers = [currentFlashcard.answer, currentFlashcard.extraAnswerOne, currentFlashcard.extraAnswerTwo].shuffled()
         
-        btnOptionOne.setTitle(currentFlashcard.extraAnswerOne, for: .normal)
-        btnOptionTwo.setTitle(currentFlashcard.answer, for: .normal)
-        btnOptionThree.setTitle(currentFlashcard.extraAnswerTwo, for: .normal)
+        
+        for (button, answer) in zip(buttons, answers){
+            button?.setTitle(answer, for: .normal)
+            
+            if answer == currentFlashcard.answer{
+                correctAnswerButton = button
+            }
+        }
+        
     }
     
     func updateNextPrevButtons(){
@@ -268,26 +279,10 @@ class ViewController: UIViewController {
     func updateFlashcard(question: String, answer: String, extraAnswerOne: String, extraAnswerTwo: String, isExisting: Bool) {
         let flashcard = Flashcard(question: question, answer: answer, extraAnswerOne: extraAnswerOne, extraAnswerTwo: extraAnswerTwo)
         
-        btnOptionOne.setTitle(extraAnswerOne, for: .normal)
-        btnOptionTwo.setTitle(answer, for: .normal)
-        btnOptionThree.setTitle(extraAnswerTwo, for: .normal)
-        
-//        btnOptionOne.isEnabled = true
-//        btnOptionTwo.isEnabled = true
-//        btnOptionThree.isEnabled = true
-        
-        let buttons = [btnOptionOne, btnOptionTwo, btnOptionThree].shuffled()
-        let answers = [flashcard.answer, flashcard.extraAnswerOne, flashcard.extraAnswerTwo].shuffled()
-        
-        
-        for (button, answer) in zip(buttons, answers){
-            button?.setTitle(answer, for: .normal)
-            
-            if answer == flashcard.answer{
-                correctAnswerButton = button
-            }
-        }
-        
+//        btnOptionOne.setTitle(extraAnswerOne, for: .normal)
+//        btnOptionTwo.setTitle(answer, for: .normal)
+//        btnOptionThree.setTitle(extraAnswerTwo, for: .normal)
+//
         
         if isExisting{
             flashcards[currentIndex] = flashcard
