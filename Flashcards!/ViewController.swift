@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         }
         
         else{
-            frontLabel.isHidden = true
+            frontLabel.isHidden = false
             btnOptionTwo.isEnabled = false
         }
     }
@@ -179,7 +179,7 @@ class ViewController: UIViewController {
     }
     
     func animateCardOut(){
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
         }, completion: {finished in
             self.updateLabels()
