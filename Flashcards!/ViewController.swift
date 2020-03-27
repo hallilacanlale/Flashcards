@@ -59,9 +59,12 @@ class ViewController: UIViewController {
             updateNextPrevButtons()
         }
         
-        card.layer.cornerRadius = 20.0
-        card.layer.shadowRadius = 15.0
-        card.layer.shadowOpacity = 0.2
+        frontLabel.layer.cornerRadius = 20.0
+        backLabel.layer.cornerRadius = 20.0
+        frontLabel.layer.shadowRadius = 15.0
+        frontLabel.layer.shadowOpacity = 0.2
+        backLabel.layer.shadowRadius = 15.0
+        backLabel.layer.shadowOpacity = 0.2
         
         btnOptionOne.layer.shadowRadius = 15.0
         btnOptionOne.layer.shadowOpacity = 0.2
@@ -81,12 +84,9 @@ class ViewController: UIViewController {
         btnOptionThree.layer.borderWidth = 3.0
         btnOptionThree.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
 
-
-        // Do any additional setup after loading the view.
-        card.clipsToBounds = true
-        btnOptionOne.clipsToBounds = true
-        btnOptionTwo.clipsToBounds = true
-        btnOptionThree.clipsToBounds = true
+        
+        frontLabel.clipsToBounds = true
+        backLabel.clipsToBounds = true
 
     }
     
